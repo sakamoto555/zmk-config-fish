@@ -95,7 +95,7 @@
         layer_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+& caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 TAB   &mt LGUI SPACE      &kp RET     &lt 2 BSPC  
             >;
@@ -104,7 +104,7 @@
         layer_math {
             bindings = <
                         &kp N7      &kp N8      &kp N9      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
-&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt LCTRL DQT &kp SQT &kp SEMI 
+&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
             &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
                                                 &none       &trans              &trans      &lt 6 SPACE 
             >;
@@ -122,7 +122,7 @@
         layer_mac_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&kp LS(CAPS) &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 4 TAB   &mt LGUI SPACE      &kp RET     &lt 5 BSPC  
             >;
@@ -131,8 +131,8 @@
         layer_mac_math {
             bindings = <
                         &kp N7      &kp N8      &kp N9      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
-&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp LS(INT1) &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp FSLH &kp PRCNT 
-            &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp SQT     &kp SEMI    
+&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
+            &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
                                                 &none       &trans              &trans      &lt 6 SPACE 
             >;
         };
