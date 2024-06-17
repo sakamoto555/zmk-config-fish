@@ -111,17 +111,17 @@
         layer_mac_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&kp Q       &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&kp LS(CAPS) &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
-                                                &lt 4 TAB   &mt LGUI SPACE      &mt RGUI TAB &lt 5 BSPC 
+                                                &lt 4 TAB   &mt LGUI SPACE      &kp RET     &lt 5 BSPC  
             >;
         };
 
         layer_mac_math {
             bindings = <
-                        &kp N1      &kp N2      &kp N3      &trans              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
-&kp PLUS    &kp N0      &mt LCTRL N4 &mt LALT N5 &mt LSHFT N6 &kp DOT           &kp LS(INT1) &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp FSLH &kp PRCNT 
-            &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp SQT     &kp SEMI    
+                        &kp N7      &kp N8      &kp N9      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
+&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp LS(INT1) &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp FSLH &kp PRCNT 
+            &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp SQT     &kp SEMI    
                                                 &none       &trans              &trans      &lt 6 SPACE 
             >;
         };
