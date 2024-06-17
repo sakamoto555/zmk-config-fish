@@ -44,6 +44,17 @@
     };
 
     macros {
+        caps_macro: caps_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANG2>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp CAPS>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp CAPS>
+                ;
+        };
     };
 
     conditional_layers {
@@ -64,12 +75,12 @@
 
         combo_lang2 {
             key-positions = <21 22>;
-            bindings = <&kp CAPS>;
+            bindings = <&kp LANG2>;
         };
 
         combo_lang1 {
             key-positions = <25 26>;
-            bindings = <&kp INT2>;
+            bindings = <&kp LANG1>;
         };
     };
     
@@ -84,7 +95,7 @@
         layer_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&kp LS(CAPS) &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 TAB   &mt LGUI SPACE      &kp RET     &lt 2 BSPC  
             >;
