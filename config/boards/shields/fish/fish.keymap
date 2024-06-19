@@ -48,11 +48,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LANG2>
-                , <&macro_press &kp LSHFT>
-                , <&macro_press &kp CAPS>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
                 , <&macro_release &kp LSHFT>
-                , <&macro_release &kp CAPS>
                 ;
         };
     };
