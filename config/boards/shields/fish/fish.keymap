@@ -48,9 +48,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
+                = <&macro_tap &kp LANG2>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp CAPS>
                 , <&macro_release &kp LSHFT>
+                , <&macro_release &kp CAPS>
                 ;
         };
     };
@@ -120,7 +122,7 @@
         layer_mac_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-& caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 4 TAB   &mt LGUI SPACE      &kp RET     &lt 5 BSPC  
             >;
