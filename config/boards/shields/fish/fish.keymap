@@ -44,11 +44,22 @@
     };
 
     macros {
-        caps_macro: caps_macro {
+        ALPH_TOGGLE: macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LANG2>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp CAPS>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp CAPS>
+                ;
+        };
+        KANA_TOGGLE: macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANG1>
                 , <&macro_press &kp LSHFT>
                 , <&macro_press &kp CAPS>
                 , <&macro_release &kp LSHFT>
@@ -82,6 +93,16 @@
             key-positions = <25 26>;
             bindings = <&kp LANG1>;
         };
+
+        combo_alph_toggle {
+            key-positions = <0 1>;
+            bindings = <&ALPH_TOGGLE>;
+        };
+
+        combo_kana_toggle {
+            key-positions = <6 7>;
+            bindings = <&KANA_TOGGLE>;
+        };
     };
     
 
@@ -92,10 +113,10 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_base {
+        layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp DOT             &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&lt 7 Q     &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp DOT             &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 TAB   &mt LGUI SPACE      &kp RET     &lt 2 BSPC  
             >;
@@ -104,7 +125,7 @@
         layer_math {
             bindings = <
                         &kp N4      &kp N5      &kp N6      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
-&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp COMMA         &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
+&kp PLUS    &trans      &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp COMMA         &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
             &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
                                                 &none       &trans              &trans      &lt 6 SPACE 
             >;
@@ -122,7 +143,7 @@
         layer_mac_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&caps_macro &kp E      &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&lt 7 Q     &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 4 TAB   &mt LGUI SPACE      &kp RET     &lt 5 BSPC  
             >;
@@ -131,7 +152,7 @@
         layer_mac_math {
             bindings = <
                         &kp N7      &kp N8      &kp N9      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
-&kp PLUS    &kp Q       &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
+&kp PLUS    &trans      &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
             &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
                                                 &none       &trans              &trans      &lt 6 SPACE 
             >;
@@ -152,6 +173,15 @@
 &kp F1      &out OUT_TOG &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F6          &kp F7      &kp DEL     &kp END     &kp PG_DN   &kp K_APP   &kp F12     
             &kp F2      &kp F3      &kp F4      &kp F5                                      &kp F8      &kp F9      &kp F10     &kp F11     
                                                 &none       &none               &none       &none       
+            >;
+        };
+
+        layer_shortcut {
+            bindings = <
+                        &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      
+&trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &kp PAUSE_BREAK 
+            &trans      &trans      &trans      &trans                                      &trans      &trans      &trans      &trans      
+                                                &trans      &trans              &trans      &trans      
             >;
         };
     };
