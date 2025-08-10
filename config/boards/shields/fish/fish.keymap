@@ -104,6 +104,11 @@
             key-positions = <6 7>;
             bindings = <&KANA_TOGGLE>;
         };
+
+        combo_ret {
+            key-positions = <16 17>;
+            bindings = <&kp RET>;
+        };
     };
     
 
@@ -119,7 +124,7 @@
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &lt 7 Q     &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp DOT             &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
-                                                &lt 1 TAB   &mt LGUI SPACE      &lt 2 RET   &trans      
+                                                &lt 1 TAB   &mt LGUI SPACE      &lt 2 BSPC  &lt 2 BSPC  
             >;
         };
 
@@ -128,7 +133,7 @@
                         &kp N4      &kp N5      &kp N6      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
 &kp PLUS    &trans      &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp COMMA         &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
             &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
-                                                &none       &trans              &lt 6 SPACE &trans      
+                                                &none       &trans              &lt 6 SPACE &lt 6 SPACE 
             >;
         };
 
@@ -146,7 +151,7 @@
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &lt 7 Q     &kp E       &mt LCTRL I &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
-                                                &lt 4 TAB   &mt LGUI SPACE      &lt 5 BSPC  &trans      
+                                                &lt 4 TAB   &mt LGUI SPACE      &lt 5 BSPC  &lt 5 BSPC  
             >;
         };
 
@@ -155,7 +160,7 @@
                         &kp N7      &kp N8      &kp N9      &kp N0              &kp EQUAL   &kp LT      &kp UNDER   &kp GT      
 &kp PLUS    &trans      &mt LCTRL N1 &mt LALT N2 &mt LSHFT N3 &kp DOT           &kp FSLH    &mt RSHFT COLON &mt RALT MINUS &mt RCTRL DQT &kp SQT &kp SEMI 
             &kp DLLR    &kp N4      &kp N5      &kp N6                                      &kp EXCL    &kp QMARK   &kp PRCNT   &kp LS(INT1) 
-                                                &none       &trans              &lt 6 SPACE &trans      
+                                                &none       &trans              &lt 6 SPACE &lt 6 SPACE 
             >;
         };
 
@@ -182,7 +187,7 @@
                         &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      
 &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &kp PAUSE_BREAK 
             &trans      &trans      &trans      &trans                                      &trans      &trans      &trans      &trans      
-                                                &trans      &trans              &kp BSPC    &trans      
+                                                &trans      &trans              &kp RET     &trans      
             >;
         };
     };
